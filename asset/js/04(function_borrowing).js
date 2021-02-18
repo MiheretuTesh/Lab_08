@@ -14,9 +14,7 @@ const Brad = {
     firstName: "Brad",
     lastName: "Bansely",
     fullName: function(ui_place, message) {
-
         ui_place.innerHTML = `${message} ${this.firstName} ${this.lastName}`;
-
     }
 }
 
@@ -29,8 +27,11 @@ function usingCall() {
     }
 
     //1. Borrow fullName using call
-    //2. Pass call_demo[as ui_place] , Hi I am ,[message]
+    Brad.fullName.call(Cerscy, call_demo);
+    // Brad.fullName(call_demo, "Hi I am").call(Cerscy, call_demo);
 
+    //2. Pass call_demo[as ui_place] , Hi I am ,[message]
+    // call_demo.innerHTML = variable;
 
 }
 
@@ -43,6 +44,7 @@ function usingApply() {
     }
 
     //1. Borrow fullName using apply
+    Brad.fullName(apply_demo, "Hi I am").apply(Jon, ['id: '] )
     //2. Pass apply_demo[as ui_place] and Hi I am ,[as message] as array
 
 
