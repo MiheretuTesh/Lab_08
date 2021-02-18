@@ -5,20 +5,29 @@ function Person(firstName, lastName) {
 }
 
 // 1. Create a getFullName Method on prototype object 
+Person.prototype.getFullName = ()=>{
+
 // 2. The Function will return firstName lastName
+
+    return this.firstName+this.lastName;
+
+
+}
+
 
 
 //create a customer object
 function Customer(firstName, lastName, membership) {
 
     //3. Call the Person Object Constructor using call [Person.call(this,firsName,lastName)]
-
+    Person.call(this,firstName,lastName);
 
     this.membership = membership;
 
 }
 
 // 4. Set the prototype of Customer to be Person Prototype 
+Customer.prototype = Object.create(Person.prototype);
 // Note : Use Object.create
 
 
