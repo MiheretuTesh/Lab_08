@@ -33,7 +33,7 @@ Customer.prototype.constructor=Customer;
 
 // Create Customer Object pass ["Jorah", "Mormont", "PRO"]
 
-var customer_1 = new Customer("Jorah", "Mormont","Pro");
+let customer_1 = new Customer("Jorah", "Mormont","Pro");
 //6. Display The Full Name [remove the string when you have the object]
 
 fun_proto.innerHTML = customer_1.getFullName();
