@@ -44,7 +44,13 @@ function usingApply() {
     }
 
     //1. Borrow fullName using apply
-    Brad.fullName(apply_demo, "Hi I am").apply(Jon, ['id: '] )
+
+    // Answer
+
+    // Brad.fullName(apply_demo, "Hi I am").apply(Jon, ['id: '] )
+
+
+
     //2. Pass apply_demo[as ui_place] and Hi I am ,[as message] as array
 
 
@@ -59,6 +65,7 @@ function usingBind() {
     }
 
     //1. Borrow fullName using bind
+        Brad.fullName(bind_demo, "Hi I am ,").bind(Daenerys)
     //2. Pass bind_demo[as ui_place] , Hi I am ,[as message]
 
 
