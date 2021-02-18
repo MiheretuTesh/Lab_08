@@ -1,39 +1,31 @@
 //DOM Load 
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
     arrayDestructuring();
     objectDestructuring();
     spreadSyntax();
     restSyntax();
-
-
-
-
 });
 
 function arrayDestructuring() {
 
     // we have an array with the name and surname
-    let arr = ["Margaery", "Tyrell"]
+    // let arr = ;
 
     //1. Destructor this array to firstName and lastName
-
+    let[firstName, surname] = ["Margaery", "Tyrell"];
     //2. Display it  [Replace it with ${firstName} ${lastName} once you have the variables]
-    des_arr.innerHTML = `Hello , I am firstName lastName `
-
-
+    des_arr.innerHTML = `Hello , ${firstName} ${surname}`;
     // we have an array with the name and surname
     let str = "Margaery Tyrell"
 
     //1. Destructor this string array to firstName and lastName by using split() method of string object
-
+    let ar = str.split(" ");
+    let [firstname, surName];
     //2. Display it [Replace it with ${firstName} ${lastName} once you have the variables]
-    des_string.innerHTML = `Hello , I am firstName lastName `
-
-
-
-
-
+    des_string.innerHTML = `Hello , ${firstname} ${surName}`
 }
 
 function objectDestructuring() {
@@ -42,9 +34,10 @@ function objectDestructuring() {
     let person = { firstName: "John", lastName: "Smith" }
 
     //1. Destructor this object to firstName and lastName 
-
+    ({firstName, lastName} = person);
     //2. Display it [Replace it with ${firstName} ${lastName} once you have the variables]
-    des_obj1.innerHTML = `Hi , I am firstName lastName `
+
+    des_obj1.innerHTML = `Hi , ${firstName} ${lastName}`
 
 
     //1. Destructor this object to fName and sName [different naming]
